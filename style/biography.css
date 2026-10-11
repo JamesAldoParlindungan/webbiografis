@@ -1,0 +1,1190 @@
+
+/* =====================================================
+   BEYOND NUMBERS — BIOGRAPHY STYLES
+   Shared profile layout for historical figures
+===================================================== */
+
+
+/* =====================================================
+   1. BIOGRAPHY DESIGN TOKENS
+===================================================== */
+
+:root {
+    --bio-ink: #193B32;
+    --bio-ink-light: #285347;
+    --bio-gold: #80652F;
+    --bio-paper: #F7F5EF;
+    --bio-white: #FFFFFF;
+    --bio-muted: #62665E;
+    --bio-border: #E3E0D7;
+    --bio-soft: #EAEDE5;
+    --bio-dark: #122D25;
+
+    --bio-content-width: 1180px;
+    --bio-section-space: clamp(72px, 9vw, 120px);
+}
+
+
+/* =====================================================
+   2. SHARED BIOGRAPHY UTILITIES
+===================================================== */
+
+.bio-hero,
+.bio-section,
+.bio-introduction,
+.bio-navigation,
+.bio-reflection {
+    scroll-margin-top: 100px;
+}
+
+.bio-hero,
+.bio-section,
+.bio-introduction,
+.bio-navigation,
+.bio-reflection,
+.bio-section-soft > .container,
+.bio-section-dark > .container {
+    width: min(
+        var(--bio-content-width),
+        calc(100% - 80px)
+    );
+    margin-inline: auto;
+}
+
+.bio-section h2,
+.bio-intro-content h2,
+.bio-reflection h2,
+.legacy-heading h2 {
+    color: var(--bio-ink);
+}
+
+.bio-section h2 span,
+.bio-intro-content h2 span,
+.bio-reflection h2 span,
+.legacy-heading h2 span {
+    color: var(--bio-gold);
+    font-style: italic;
+}
+
+.bio-section p,
+.bio-intro-content p,
+.bio-reflection p {
+    line-height: 1.95;
+}
+
+
+/* =====================================================
+   3. BREADCRUMB
+===================================================== */
+
+.bio-breadcrumb {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px;
+
+    padding-top: 30px;
+    margin-bottom: 50px;
+
+    color: var(--bio-muted);
+    font-size: 0.76rem;
+}
+
+.bio-breadcrumb a {
+    transition: color 0.3s ease;
+}
+
+.bio-breadcrumb a:hover {
+    color: var(--bio-ink);
+}
+
+.bio-breadcrumb > span:last-child {
+    color: var(--bio-ink);
+}
+
+
+/* =====================================================
+   4. BIOGRAPHY HERO
+===================================================== */
+
+.bio-hero {
+    padding-bottom: 100px;
+}
+
+.bio-hero-grid {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    align-items: center;
+    gap: clamp(40px, 7vw, 90px);
+}
+
+.bio-hero-content {
+    min-width: 0;
+}
+
+.bio-hero-content > .eyebrow {
+    margin-bottom: 28px;
+}
+
+.bio-hero-content h1 {
+    margin-bottom: 18px;
+
+    color: var(--bio-ink);
+    font-size: clamp(3rem, 5.5vw, 5.5rem);
+    line-height: 1.08;
+}
+
+.bio-hero-content h1 .title-italic {
+    display: block;
+
+    color: var(--bio-gold);
+    font-weight: 400;
+    font-style: italic;
+}
+
+.bio-subtitle {
+    margin-bottom: 25px;
+
+    color: var(--bio-muted);
+    font-family: var(--font-heading);
+    font-size: 1.2rem;
+    font-style: italic;
+}
+
+.bio-lead {
+    max-width: 560px;
+
+    color: var(--bio-muted);
+    font-size: 0.94rem;
+    line-height: 1.95;
+}
+
+
+/* Quick Facts */
+
+.bio-quick-facts {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 18px;
+
+    margin-top: 38px;
+    padding-top: 25px;
+
+    border-top: 1px solid var(--bio-border);
+}
+
+.quick-fact {
+    min-width: 0;
+}
+
+.fact-label {
+    display: block;
+    margin-bottom: 8px;
+
+    color: var(--bio-gold);
+    font-size: 0.64rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+}
+
+.quick-fact strong {
+    display: block;
+
+    color: var(--bio-ink);
+    font-size: 0.79rem;
+    font-weight: 600;
+    line-height: 1.7;
+}
+
+
+/* Portrait */
+
+.bio-portrait {
+    position: relative;
+    min-width: 0;
+}
+
+.bio-portrait-frame {
+    position: relative;
+    padding: 14px;
+
+    background: #E8E5DA;
+    border-radius: 2px;
+}
+
+.bio-portrait-frame img {
+    display: block;
+
+    width: 100%;
+    height: clamp(380px, 48vw, 550px);
+
+    object-fit: cover;
+    object-position: center 20%;
+
+    background: #DDD8CB;
+}
+
+.portrait-placeholder {
+    position: relative;
+    display: grid;
+    place-items: center;
+    width: 100%;
+    height: clamp(380px, 48vw, 550px);
+    overflow: hidden;
+    color: #F7F5EF;
+    background:
+        radial-gradient(circle at 50% 45%, rgba(216, 198, 158, 0.28), transparent 35%),
+        linear-gradient(145deg, #315649, #193B32 58%, #102820);
+    font-family: var(--font-heading);
+    font-size: clamp(5rem, 12vw, 9rem);
+    letter-spacing: -0.08em;
+}
+
+.portrait-placeholder::before,
+.portrait-placeholder::after {
+    content: "";
+    position: absolute;
+    width: 70%;
+    aspect-ratio: 1;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 50%;
+}
+
+.portrait-placeholder::after {
+    width: 52%;
+}
+
+.portrait-placeholder {
+    isolation: isolate;
+}
+
+.portrait-placeholder::before,
+.portrait-placeholder::after {
+    z-index: -1;
+}
+
+.portrait-caption {
+    display: block;
+    padding-top: 14px;
+
+    color: var(--bio-muted);
+    font-size: 0.62rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+}
+
+.portrait-decoration {
+    position: absolute;
+    top: -30px;
+    right: -22px;
+
+    color: var(--bio-gold);
+    font-size: 3rem;
+
+    pointer-events: none;
+}
+
+
+/* =====================================================
+   5. BIOGRAPHY INTRODUCTION
+===================================================== */
+
+.bio-introduction {
+    width: 100%;
+    max-width: none;
+    margin: 0;
+
+    padding: var(--bio-section-space) 0;
+
+    background: var(--bio-soft);
+    border-block: 1px solid var(--bio-border);
+}
+
+.bio-intro-grid {
+    width: min(
+        var(--bio-content-width),
+        calc(100% - 80px)
+    );
+    margin-inline: auto;
+
+    display: grid;
+    grid-template-columns: 0.65fr 1.35fr;
+    gap: 70px;
+}
+
+.bio-intro-grid .section-index {
+    color: var(--bio-gold);
+}
+
+.bio-intro-content h2 {
+    max-width: 700px;
+    margin-bottom: 28px;
+
+    font-size: clamp(2.2rem, 4vw, 3.8rem);
+}
+
+.bio-intro-content h2 span {
+    display: block;
+}
+
+.bio-intro-content p {
+    max-width: 700px;
+
+    color: var(--bio-muted);
+    font-size: 0.92rem;
+}
+
+.bio-intro-content p + p {
+    margin-top: 18px;
+}
+
+
+/* =====================================================
+   6. GENERAL BIOGRAPHY SECTIONS
+===================================================== */
+
+.bio-section {
+    padding-block: var(--bio-section-space);
+}
+
+.bio-section-heading {
+    max-width: 800px;
+    margin-bottom: 65px;
+}
+
+.bio-section-heading:has(> .bio-section-marker) {
+    max-width: none;
+    display: grid;
+    grid-template-columns: minmax(160px, 0.4fr) minmax(0, 1.6fr);
+    gap: clamp(32px, 6vw, 72px);
+    align-items: start;
+}
+
+.bio-section-heading .eyebrow {
+    margin-bottom: 22px;
+}
+
+.bio-section-heading h2 {
+    margin-bottom: 24px;
+
+    font-size: clamp(2.4rem, 4.5vw, 4rem);
+}
+
+.bio-section-heading h2 span {
+    display: block;
+}
+
+.bio-heading-description {
+    max-width: 650px;
+    color: var(--bio-muted);
+}
+
+.bio-two-column {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    align-items: start;
+    gap: clamp(18px, 2.5vw, 30px);
+}
+
+.bio-two-column:has(> .bio-section-marker) {
+    grid-template-columns: minmax(180px, 0.4fr) minmax(0, 1.6fr);
+    gap: clamp(32px, 6vw, 72px);
+}
+
+.bio-section-marker {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.large-number {
+    color: var(--bio-gold);
+
+    font-family: var(--font-heading);
+    font-size: 5rem;
+    font-weight: 400;
+    line-height: 1;
+    letter-spacing: -0.06em;
+}
+
+.marker-line {
+    width: 50px;
+    height: 1px;
+
+    margin-block: 24px;
+
+    background: var(--bio-gold);
+}
+
+.marker-label {
+    color: var(--bio-muted);
+
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+}
+
+.bio-section-body {
+    min-width: 0;
+}
+
+.bio-section-body h3 {
+    margin-bottom: 20px;
+
+    color: var(--bio-ink);
+    font-size: clamp(1.5rem, 2.5vw, 2rem);
+}
+
+.bio-section-body h3:not(:first-child) {
+    margin-top: 42px;
+}
+
+.bio-section-body p {
+    color: var(--bio-muted);
+    font-size: 0.91rem;
+}
+
+.bio-section-body p + p {
+    margin-top: 20px;
+}
+
+
+/* =====================================================
+   7. SOFT SECTION
+===================================================== */
+
+.bio-section-soft {
+    width: 100%;
+    max-width: none;
+    margin: 0;
+
+    padding-block: var(--bio-section-space);
+
+    background: var(--bio-soft);
+    border-block: 1px solid var(--bio-border);
+}
+
+.bio-section-soft .bio-two-column {
+    width: 100%;
+}
+
+.bio-two-column > .bio-content-block {
+    min-width: 0;
+    height: 100%;
+    padding: clamp(22px, 3vw, 32px);
+    border: 1px solid var(--bio-border);
+    background: var(--bio-white);
+    border-radius: var(--radius-sm);
+    box-shadow: 0 8px 24px rgba(25, 59, 50, 0.045);
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        border-color 0.3s ease;
+}
+
+.bio-two-column > .bio-content-block:hover {
+    transform: translateY(-3px);
+    border-color: rgba(128, 101, 47, 0.55);
+    box-shadow: 0 14px 30px rgba(25, 59, 50, 0.08);
+}
+
+.bio-two-column:has(> .bio-section-marker) > .bio-content-block {
+    height: auto;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    border-radius: 0;
+    box-shadow: none;
+}
+
+.bio-two-column:has(> .bio-section-marker) > .bio-content-block:hover {
+    transform: none;
+    border-color: transparent;
+    box-shadow: none;
+}
+
+.bio-two-column > .bio-content-block h3 {
+    margin-block: 18px 12px;
+    color: var(--bio-ink);
+    font-size: clamp(1.3rem, 2vw, 1.65rem);
+}
+
+.bio-two-column > .bio-content-block p {
+    color: var(--bio-muted);
+    font-size: 0.9rem;
+    line-height: 1.85;
+}
+
+.bio-two-column > .bio-content-block p + p {
+    margin-top: 14px;
+}
+
+.bio-two-column > .bio-content-block .data-principle {
+    margin-top: 0;
+}
+
+.bio-two-column > .bio-content-block .data-principle + h3 {
+    margin-top: 24px;
+}
+
+.bio-section-dark .bio-two-column > .bio-content-block {
+    border-color: rgba(255, 255, 255, 0.15);
+    background: rgba(255, 255, 255, 0.035);
+}
+
+.bio-section-dark .bio-two-column > .bio-content-block h3 {
+    color: #FFFFFF;
+}
+
+.bio-section-dark .bio-two-column > .bio-content-block p {
+    color: rgba(255, 255, 255, 0.78);
+}
+
+.bio-section-dark .bio-two-column > .bio-content-block:hover {
+    border-color: rgba(216, 198, 158, 0.65);
+    box-shadow: 0 14px 30px rgba(0, 0, 0, 0.12);
+}
+
+
+/* =====================================================
+   8. HISTORICAL QUOTE
+===================================================== */
+
+.bio-quote {
+    margin-top: 42px;
+    padding: 30px 32px;
+
+    background: var(--bio-white);
+    border-left: 3px solid var(--bio-gold);
+}
+
+.quote-mark {
+    display: block;
+    margin-bottom: 8px;
+
+    color: var(--bio-gold);
+    font-family: var(--font-heading);
+    font-size: 3.5rem;
+    line-height: 1;
+}
+
+.bio-quote p {
+    color: var(--bio-ink);
+    font-family: var(--font-heading);
+    font-size: 1.2rem;
+    font-style: italic;
+    line-height: 1.8;
+}
+
+.bio-quote blockquote,
+blockquote.bio-quote {
+    color: var(--bio-ink);
+    font-family: var(--font-heading);
+    font-size: clamp(1.15rem, 2.4vw, 1.55rem);
+    font-style: italic;
+    line-height: 1.8;
+}
+
+.bio-quote cite {
+    display: block;
+    margin-top: 20px;
+
+    color: var(--bio-muted);
+    font-size: 0.73rem;
+    font-style: normal;
+}
+
+
+/* =====================================================
+   9. DATA PRINCIPLE CARD
+===================================================== */
+
+.data-principle {
+    display: grid;
+    grid-template-columns: 65px 1fr;
+    align-items: start;
+    gap: 22px;
+
+    margin-top: 38px;
+    padding: 28px;
+
+    background: var(--bio-soft);
+    border: 1px solid var(--bio-border);
+    border-radius: 4px;
+}
+
+.principle-symbol {
+    display: grid;
+    place-items: center;
+
+    width: 60px;
+    height: 60px;
+
+    color: #FFFFFF;
+    background: var(--bio-ink);
+
+    font-family: var(--font-heading);
+    font-size: 2rem;
+}
+
+.data-principle h4 {
+    margin-bottom: 10px;
+
+    color: var(--bio-ink);
+    font-family: var(--font-heading);
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.data-principle p {
+    color: var(--bio-muted);
+    font-size: 0.84rem;
+    line-height: 1.85;
+}
+
+
+/* =====================================================
+   10. DARK LEGACY SECTION
+===================================================== */
+
+.bio-section-dark {
+    width: 100%;
+    max-width: none;
+    margin: 0;
+
+    padding-block: var(--bio-section-space);
+
+    color: #FFFFFF;
+    background: var(--bio-dark);
+}
+
+.legacy-heading {
+    max-width: 750px;
+    margin-bottom: 55px;
+}
+
+.legacy-heading .eyebrow {
+    margin-bottom: 22px;
+    color: #D8C69E;
+}
+
+.legacy-heading h2 {
+    margin-bottom: 25px;
+
+    color: #FFFFFF;
+    font-size: clamp(2.5rem, 4.5vw, 4rem);
+}
+
+.legacy-heading h2 span {
+    color: #D8C69E;
+}
+
+.legacy-heading > p:last-child {
+    max-width: 650px;
+
+    color: rgba(255, 255, 255, 0.68);
+    font-size: 0.91rem;
+}
+
+.legacy-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 22px;
+}
+
+.legacy-card {
+    padding: 30px 26px;
+
+    color: var(--bio-ink);
+    border: 1px solid var(--bio-border);
+    background: var(--bio-white);
+
+    transition:
+        background 0.3s ease,
+        border-color 0.3s ease,
+        transform 0.3s ease;
+}
+
+.legacy-card:hover {
+    background: var(--bio-paper);
+    border-color: var(--bio-gold);
+    transform: translateY(-5px);
+}
+
+.legacy-number {
+    display: block;
+    margin-bottom: 28px;
+
+    color: var(--bio-gold);
+    font-family: var(--font-heading);
+    font-size: 2rem;
+}
+
+.legacy-card h3 {
+    margin-bottom: 16px;
+
+    color: var(--bio-ink);
+    font-size: 1.35rem;
+}
+
+.legacy-card p {
+    color: var(--bio-muted);
+    font-size: 0.83rem;
+    line-height: 1.9;
+}
+
+.bio-section-dark .legacy-card {
+    border-color: rgba(255, 255, 255, 0.17);
+    background: rgba(255, 255, 255, 0.025);
+}
+
+.bio-section-dark .legacy-card:hover {
+    background: rgba(255, 255, 255, 0.06);
+    border-color: rgba(216, 198, 158, 0.65);
+}
+
+.bio-section-dark .legacy-number {
+    color: #D8C69E;
+}
+
+.bio-section-dark .legacy-card h3 {
+    color: #FFFFFF;
+}
+
+.bio-section-dark .legacy-card p {
+    color: rgba(255, 255, 255, 0.67);
+}
+
+
+/* =====================================================
+   11. REFLECTION
+===================================================== */
+
+.bio-reflection {
+    padding-block: var(--bio-section-space);
+}
+
+.bio-reflection .eyebrow {
+    margin-bottom: 22px;
+}
+
+.bio-reflection h2 {
+    max-width: 800px;
+    margin-bottom: 45px;
+
+    font-size: clamp(2.4rem, 4.5vw, 4rem);
+}
+
+.bio-reflection h2 span {
+    display: block;
+}
+
+.reflection-content {
+    max-width: 800px;
+    margin-left: auto;
+}
+
+.reflection-content p {
+    color: var(--bio-muted);
+    font-size: 0.93rem;
+}
+
+.reflection-content p + p {
+    margin-top: 22px;
+}
+
+
+/* =====================================================
+   12. PROFILE NAVIGATION
+===================================================== */
+
+.bio-navigation {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: 24px;
+
+    padding-block: 35px 80px;
+
+    border-top: 1px solid var(--bio-border);
+}
+
+.bio-navigation > .container {
+    display: contents;
+}
+
+.bio-nav-item {
+    min-width: 0;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+
+    padding: 22px 0;
+
+    transition: color 0.3s ease;
+}
+
+.bio-nav-next {
+    align-items: flex-end;
+    text-align: right;
+}
+
+.bio-nav-label {
+    color: var(--bio-gold);
+    font-size: 0.66rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+}
+
+.bio-nav-title {
+    color: var(--bio-ink);
+    font-family: var(--font-heading);
+    font-size: clamp(1.15rem, 2.5vw, 1.7rem);
+
+    transition: color 0.3s ease;
+}
+
+.bio-nav-item:hover .bio-nav-title {
+    color: var(--bio-gold);
+}
+
+
+/* =====================================================
+   13. TABLET RESPONSIVENESS
+===================================================== */
+
+@media (max-width: 1000px) {
+
+    .bio-hero-grid {
+        grid-template-columns: 1fr 0.8fr;
+        gap: 40px;
+    }
+
+    .bio-hero-content h1 {
+        font-size: clamp(2.8rem, 5.5vw, 4.5rem);
+    }
+
+    .bio-intro-grid {
+        gap: 40px;
+    }
+
+    .bio-two-column {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 24px;
+    }
+
+    .bio-two-column:has(> .bio-section-marker) {
+        grid-template-columns: minmax(140px, 0.4fr) minmax(0, 1.6fr);
+        gap: 32px;
+    }
+
+    .bio-quick-facts {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .quick-fact {
+        display: grid;
+        grid-template-columns: 95px 1fr;
+        gap: 10px;
+    }
+
+    .fact-label {
+        margin-bottom: 0;
+    }
+
+    .legacy-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .legacy-card {
+        display: grid;
+        grid-template-columns: 55px 1fr;
+        column-gap: 20px;
+    }
+
+    .legacy-number {
+        grid-row: span 2;
+        margin-bottom: 0;
+    }
+
+    .legacy-card h3 {
+        margin-bottom: 10px;
+    }
+
+    .legacy-card p {
+        grid-column: 2;
+    }
+}
+
+
+/* =====================================================
+   14. MOBILE RESPONSIVENESS
+===================================================== */
+
+@media (max-width: 700px) {
+
+    .bio-hero,
+    .bio-section,
+    .bio-navigation,
+    .bio-reflection,
+    .bio-section-soft > .container,
+    .bio-section-dark > .container {
+        width: calc(100% - 40px);
+    }
+
+    .bio-hero {
+        padding-bottom: 70px;
+    }
+
+    .bio-breadcrumb {
+        gap: 7px;
+        margin-bottom: 35px;
+
+        font-size: 0.68rem;
+    }
+
+    .bio-hero-grid {
+        grid-template-columns: 1fr;
+        gap: 45px;
+    }
+
+    .bio-hero-content h1 {
+        font-size: clamp(2.9rem, 11vw, 4.3rem);
+    }
+
+    .bio-hero-content > .eyebrow {
+        margin-bottom: 20px;
+    }
+
+    .bio-lead {
+        font-size: 0.9rem;
+    }
+
+    .bio-quick-facts {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 20px;
+    }
+
+    .quick-fact {
+        display: block;
+    }
+
+    .fact-label {
+        margin-bottom: 6px;
+    }
+
+    .bio-portrait {
+        width: min(100%, 430px);
+        justify-self: center;
+    }
+
+    .bio-portrait-frame img,
+    .portrait-placeholder {
+        height: 440px;
+    }
+
+    .portrait-decoration {
+        right: -10px;
+    }
+
+    .bio-introduction {
+        padding-block: 70px;
+    }
+
+    .bio-intro-grid {
+        width: calc(100% - 40px);
+        grid-template-columns: 1fr;
+        gap: 28px;
+    }
+
+    .bio-intro-content h2 {
+        font-size: clamp(2.1rem, 8vw, 3rem);
+    }
+
+    .bio-section {
+        padding-block: 75px;
+    }
+
+    .bio-section-heading {
+        margin-bottom: 45px;
+    }
+
+    .bio-section-heading h2,
+    .legacy-heading h2,
+    .bio-reflection h2 {
+        font-size: clamp(2.2rem, 8vw, 3.2rem);
+    }
+
+    .bio-two-column,
+    .bio-two-column:has(> .bio-section-marker) {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    .bio-two-column > .bio-content-block {
+        height: auto;
+    }
+
+    .bio-section-heading:has(> .bio-section-marker) {
+        grid-template-columns: 1fr;
+        gap: 22px;
+    }
+
+    .bio-section-marker {
+        display: grid;
+        grid-template-columns: auto 1fr;
+        align-items: center;
+        column-gap: 18px;
+    }
+
+    .large-number {
+        grid-row: span 2;
+        font-size: 3.5rem;
+    }
+
+    .marker-line {
+        width: 35px;
+        margin: 0;
+    }
+
+    .marker-label {
+        align-self: start;
+    }
+
+    .bio-section-body h3 {
+        font-size: 1.55rem;
+    }
+
+    .bio-quote {
+        padding: 25px 22px;
+    }
+
+    .bio-quote p {
+        font-size: 1.05rem;
+    }
+
+    .data-principle {
+        grid-template-columns: 48px 1fr;
+        gap: 16px;
+        padding: 20px;
+    }
+
+    .principle-symbol {
+        width: 46px;
+        height: 46px;
+        font-size: 1.6rem;
+    }
+
+    .bio-section-dark {
+        padding-block: 75px;
+    }
+
+    .legacy-heading {
+        margin-bottom: 40px;
+    }
+
+    .legacy-grid {
+        gap: 14px;
+    }
+
+    .legacy-card {
+        padding: 23px 20px;
+        grid-template-columns: 38px 1fr;
+        column-gap: 15px;
+    }
+
+    .legacy-number {
+        font-size: 1.6rem;
+    }
+
+    .legacy-card h3 {
+        font-size: 1.2rem;
+    }
+
+    .bio-reflection {
+        padding-block: 75px;
+    }
+
+    .bio-reflection h2 {
+        margin-bottom: 30px;
+    }
+
+    .reflection-content {
+        margin-left: 0;
+    }
+
+    .bio-navigation {
+        padding-block: 25px 55px;
+        gap: 15px;
+    }
+
+    .legacy-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .bio-nav-item {
+        gap: 10px;
+    }
+
+    .bio-nav-label {
+        font-size: 0.57rem;
+    }
+
+    .bio-nav-title {
+        font-size: 1.1rem;
+    }
+}
+
+
+/* =====================================================
+   15. SMALL MOBILE
+===================================================== */
+
+@media (max-width: 380px) {
+
+    .bio-quick-facts {
+        grid-template-columns: 1fr;
+    }
+
+    .quick-fact {
+        display: grid;
+        grid-template-columns: 90px 1fr;
+        gap: 8px;
+    }
+
+    .bio-portrait-frame img,
+    .portrait-placeholder {
+        height: 360px;
+    }
+
+    .data-principle {
+        grid-template-columns: 1fr;
+    }
+
+    .bio-navigation {
+        grid-template-columns: 1fr;
+    }
+
+    .bio-nav-next {
+        align-items: flex-start;
+        text-align: left;
+        border-top: 1px solid var(--bio-border);
+    }
+}
+
+
+/* =====================================================
+   16. ACCESSIBILITY
+===================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .legacy-card,
+    .bio-nav-title,
+    .bio-breadcrumb a {
+        transition: none;
+    }
+
+}
