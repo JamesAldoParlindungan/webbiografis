@@ -310,3 +310,8 @@ Melalui proyek ini, konsep dasar pengembangan website dapat diterapkan secara la
 
 **Teknologi:** HTML5 · CSS3 · JavaScript
 
+**To Do List:**
+- buat link link ke akun media sosial
+- tambah penelitian penelitian sebelumnya
+- tambah grafik grafik yang udah ada
+- tambah foto profil di page pribadi nantinya

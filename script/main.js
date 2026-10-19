@@ -1,9 +1,3 @@
-
-/* =========================================
-   BEYOND NUMBERS
-   Interactive Website & Motion Effects
-========================================= */
-
 document.addEventListener("DOMContentLoaded", () => {
     const body = document.body;
     const reduceMotion = window.matchMedia(
@@ -13,10 +7,6 @@ document.addEventListener("DOMContentLoaded", () => {
     // Aktifkan enhancement hanya ketika JavaScript berjalan
     body.classList.add("js-enabled");
 
-
-    /* =========================================
-       1. INJECT INTERACTION STYLES
-    ========================================= */
 
     const motionStyles = document.createElement("style");
 
@@ -201,11 +191,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     document.head.appendChild(motionStyles);
 
-
-    /* =========================================
-       2. MOBILE NAVIGATION
-    ========================================= */
-
     const menuToggle = document.getElementById("menu-toggle");
     const navMenu = document.getElementById("nav-menu");
 
@@ -260,11 +245,6 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         });
     }
-
-
-    /* =========================================
-       3. SCROLL REVEAL ANIMATIONS
-    ========================================= */
 
     const revealTargets = [
         ".bio-introduction",
@@ -327,10 +307,6 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
 
-    /* =========================================
-       4. READING PROGRESS BAR
-    ========================================= */
-
     const progressBar = document.createElement("div");
 
     progressBar.className = "reading-progress";
@@ -379,10 +355,6 @@ document.addEventListener("DOMContentLoaded", () => {
     );
 
 
-    /* =========================================
-       5. FLOATING BACK TO TOP
-    ========================================= */
-
     const floatingTop = document.createElement("button");
 
     floatingTop.className = "floating-top";
@@ -400,10 +372,6 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
-
-    /* =========================================
-       6. SMOOTH SCROLL FOR INTERNAL LINKS
-    ========================================= */
 
     document.querySelectorAll('a[href^="#"]').forEach((link) => {
         link.addEventListener("click", (event) => {
@@ -430,20 +398,11 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
 
-    /* =========================================
-       7. CURRENT YEAR IN FOOTER
-    ========================================= */
-
     const currentYear = document.getElementById("current-year");
 
     if (currentYear) {
         currentYear.textContent = new Date().getFullYear();
     }
-
-
-    /* =========================================
-       8. ACTIVE NAVIGATION STATE
-    ========================================= */
 
     const currentPage = window.location.pathname
         .split("/")
@@ -469,11 +428,6 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 
-
-    /* =========================================
-       9. IMAGE LOADING ENHANCEMENT
-    ========================================= */
-
     document.querySelectorAll("img").forEach((image) => {
         image.addEventListener("error", () => {
             image.classList.add("image-load-error");
@@ -487,11 +441,6 @@ document.addEventListener("DOMContentLoaded", () => {
             image.classList.add("image-loaded");
         }
     });
-
-
-    /* =========================================
-       10. INITIALIZE SCROLL STATE
-    ========================================= */
 
     updateScrollEffects();
 
