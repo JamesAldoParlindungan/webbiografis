@@ -536,6 +536,44 @@ section > p{
     padding-left:1.2rem;
 }
 
+/* ---------- FOKUS PENGEMBANGAN ---------- */
+#fokus .focus-grid{
+    display:grid;
+    grid-template-columns:repeat(3,minmax(0,1fr));
+    gap:1rem;
+    margin-top:2rem;
+}
+#fokus .focus-grid article{
+    min-height:220px;
+    padding:1.5rem;
+    border:2px solid var(--border);
+    background:var(--bg-2);
+    transition:transform .2s ease, border-color .2s ease, box-shadow .2s ease;
+}
+#fokus .focus-grid article:hover{
+    transform:translate(-4px,-4px);
+    border-color:var(--ink);
+    box-shadow:7px 7px 0 var(--pink);
+}
+#fokus .focus-number{
+    display:block;
+    margin-bottom:1.4rem;
+    color:var(--acid);
+    font-family:var(--font-mono);
+    font-size:.7rem;
+    letter-spacing:.12em;
+}
+#fokus .focus-grid h3{
+    margin-bottom:.65rem;
+    font-family:var(--font-display);
+    font-size:1.15rem;
+    text-transform:uppercase;
+}
+#fokus .focus-grid p{
+    color:var(--ink-dim);
+    font-size:.95rem;
+}
+
 /* ---------- KEAHLIAN ---------- */
 #keahlian article{
     border:2px solid var(--border);
@@ -846,6 +884,8 @@ footer a:hover{
 @media (max-width:640px){
     :root{--nav-h:64px;}
     header nav > a{font-size:.62rem;padding:.4rem .6rem;box-shadow:3px 3px 0 var(--acid);}
+    #fokus .focus-grid{grid-template-columns:1fr;}
+    #fokus .focus-grid article{min-height:0;}
     #pendidikan article{grid-template-columns:1fr;}
     #pendidikan article > p:first-of-type{grid-column:1;grid-row:auto;}
     #kontak article{flex-direction:column;gap:.4rem;}

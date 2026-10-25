@@ -8,6 +8,48 @@
     const prefersReduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     const isFinePointer  = window.matchMedia("(hover: hover) and (pointer: fine)").matches;
 
+    function triggerPageTransition(url) {
+        const existing = document.getElementById("preloader");
+        if (existing) existing.remove();
+
+        const loader = document.createElement("div");
+        loader.id = "preloader";
+        loader.innerHTML = `
+            <div class="pre-logo">JAMES<span>.</span>ALDO</div>
+            <div class="pre-bar"><i id="pre-fill"></i></div>
+            <div class="pre-pct" id="pre-pct">0%</div>
+            <div class="pre-tag">LOADING_PORTFOLIO.EXE</div>`;
+        document.body.prepend(loader);
+
+        const preFill = loader.querySelector("#pre-fill");
+        const prePct  = loader.querySelector("#pre-pct");
+        let pct = 0;
+
+        const run = setInterval(() => {
+            pct = Math.min(100, pct + 12);
+            preFill.style.width = pct + "%";
+            prePct.textContent = pct + "%";
+            if (pct >= 100) {
+                clearInterval(run);
+                setTimeout(() => {
+                    window.location.href = url;
+                }, prefersReduced ? 0 : 250);
+            }
+        }, 60);
+    }
+
+    const backHomeLink = document.querySelector('header nav > a[href="../index.html"]');
+    if (backHomeLink) {
+        backHomeLink.addEventListener("click", (event) => {
+            event.preventDefault();
+            if (prefersReduced) {
+                window.location.href = "../index.html";
+                return;
+            }
+            triggerPageTransition("../index.html");
+        });
+    }
+
     /* ---------------------------------------------------------
        1. PRELOADER — singkat, brutal, langsung geser ke atas
        --------------------------------------------------------- */
