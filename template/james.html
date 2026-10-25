@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="id">
 
@@ -6,687 +5,433 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta name="author" content="Nama Lengkap">
-    <meta name="description" content="Biografi dan portofolio pribadi yang memuat riwayat pendidikan, keterampilan teknologi, dan minat dalam bidang sains data.">
+    <meta name="author" content="James Aldo Parlindungan">
+    <meta name="description"
+        content="Portofolio James Aldo Parlindungan, mahasiswa Sains Data Universitas Logistik dan Bisnis Internasional yang memiliki minat pada pemrograman, analisis data, dan machine learning.">
 
-    <title>Biografi | Nama Lengkap</title>
+    <title>James Aldo Parlindungan | Portofolio</title>
 
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
-
-    <!-- Stylesheet -->
-    <link rel="stylesheet" href="style/global.css">
+    <link rel="stylesheet" href="../style/james.css">
 </head>
 
 <body>
 
-    <!-- =========================
-         HEADER & NAVIGATION
-    ========================== -->
-    <header class="site-header">
-        <nav class="navbar container" aria-label="Navigasi utama">
+    <!-- HEADER -->
+    <header id="beranda">
 
-            <a href="#beranda" class="brand">
-                <span class="brand-symbol">B.</span>
-                <span class="brand-name">BIOGRAFI<span class="brand-dot">.</span></span>
-            </a>
+        <nav aria-label="Navigasi utama">
+            <a href="../index.html">Kembali ke Beranda</a>
 
-            <button
-                class="menu-toggle"
-                id="menu-toggle"
-                type="button"
-                aria-label="Buka menu navigasi"
-                aria-expanded="false"
-                aria-controls="nav-menu"
-            >
-                <span></span>
-                <span></span>
-            </button>
-
-            <ul class="nav-menu" id="nav-menu">
-                <li><a href="#beranda" class="nav-link">Beranda</a></li>
-                <li><a href="#tentang" class="nav-link">Tentang</a></li>
-                <li><a href="#pendidikan" class="nav-link">Pendidikan</a></li>
-                <li><a href="#keahlian" class="nav-link">Keahlian</a></li>
-                <li><a href="#mata-pelajaran" class="nav-link">Akademik</a></li>
+            <ul>
+                <li><a href="#profil">Profil</a></li>
+                <li><a href="#tentang">Tentang Saya</a></li>
+                <li><a href="#keahlian">Keahlian</a></li>
+                <li><a href="#pendidikan">Pendidikan</a></li>
+                <li><a href="#prestasi">Prestasi</a></li>
+                <li><a href="#kontak">Media Sosial</a></li>
             </ul>
-
-            <a href="#kontak" class="nav-cta">
-                Hubungi Saya <span aria-hidden="true">↗</span>
-            </a>
-
         </nav>
+
     </header>
 
 
+    <!-- PROFIL UTAMA -->
     <main>
 
-        <!-- =========================
-             HERO / BERANDA
-        ========================== -->
-        <section class="hero section" id="beranda">
-
-            <div class="hero-grid container">
-
-                <div class="hero-content">
-
-                    <div class="eyebrow">
-                        <span class="status-dot"></span>
-                        <span>PROFIL PRIBADI / PORTOFOLIO</span>
-                    </div>
-
-                    <h1>
-                        Mengenal Saya<span class="heading-period">.</span>
-                        <br>
-                        <span class="heading-outline">Lebih Dekat.</span>
-                    </h1>
-
-                    <p class="hero-description">
-                        Halo, saya <strong>Nama Lengkap</strong>.
-                        Saya memiliki ketertarikan pada teknologi,
-                        pemrograman, pengolahan data, dan pengembangan
-                        solusi berbasis data.
-                    </p>
-
-                    <div class="hero-actions">
-                        <a href="#tentang" class="button button-primary">
-                            Jelajahi Profil <span aria-hidden="true">↓</span>
-                        </a>
-
-                        <a href="#keahlian" class="button button-secondary">
-                            Lihat Keahlian <span aria-hidden="true">↗</span>
-                        </a>
-                    </div>
-
-                    <div class="hero-meta">
-                        <div class="meta-item">
-                            <span class="meta-label">PENDIDIKAN</span>
-                            <span class="meta-value">SMA / ALUMNI</span>
-                        </div>
-
-                        <div class="meta-divider"></div>
-
-                        <div class="meta-item">
-                            <span class="meta-label">BIDANG MINAT</span>
-                            <span class="meta-value">DATA & TECHNOLOGY</span>
-                        </div>
-                    </div>
-
-                </div>
-
-                <div class="hero-visual">
-
-                    <div class="visual-label visual-label-top">
-                        <span>FIG. 01</span>
-                        <span>IDENTITY</span>
-                    </div>
-
-                    <div class="profile-frame">
-
-                        <!--
-                            Ganti bagian ini dengan foto profil.
-                            Contoh:
-                            <img src="assets/profile.png"
-                                 alt="Foto profil Nama Lengkap">
-                        -->
-
-                        <div class="profile-placeholder">
-                            <span class="placeholder-icon" aria-hidden="true">✳</span>
-                            <span class="placeholder-title">YOUR PHOTO</span>
-                            <span class="placeholder-caption">
-                                Tambahkan foto profil di sini
-                            </span>
-                        </div>
-
-                        <div class="frame-index">01 / PROFILE</div>
-
-                    </div>
-
-                    <div class="floating-card floating-card-top">
-                        <span class="floating-icon" aria-hidden="true">&lt;/&gt;</span>
-                        <div>
-                            <span class="floating-title">TECH ENTHUSIAST</span>
-                            <span class="floating-subtitle">Learning by building</span>
-                        </div>
-                    </div>
-
-                    <div class="floating-card floating-card-bottom">
-                        <span class="floating-number">01</span>
-                        <span class="floating-subtitle">Personal Profile</span>
-                    </div>
-
-                    <div class="visual-label visual-label-bottom">
-                        PERSONAL ARCHIVE — 2025
-                    </div>
-
-                </div>
-
-            </div>
-
-            <div class="hero-bottom container">
-                <span>SCROLL TO EXPLORE</span>
-                <span aria-hidden="true">↓</span>
-            </div>
-
-        </section>
-
-
-        <!-- =========================
-             TENTANG SAYA
-        ========================== -->
-        <section class="about section" id="tentang">
-
-            <div class="container">
-
-                <div class="section-heading">
-                    <div>
-                        <span class="section-index">01 / INTRODUCTION</span>
-                        <h2>Tentang Saya<span class="heading-period">.</span></h2>
-                    </div>
-
-                    <span class="section-tag">PERSONAL PROFILE</span>
-                </div>
-
-                <div class="about-grid">
-
-                    <div class="about-lead">
-                        <span class="about-quote-mark" aria-hidden="true">“</span>
-
-                        <h3>
-                            Bertumbuh melalui
-                            <span class="text-highlight">pengetahuan,</span>
-                            teknologi, dan pengalaman.
-                        </h3>
-                    </div>
-
-                    <div class="about-details">
-
-                        <p>
-                            Saya merupakan individu dengan latar belakang
-                            pendidikan di SMA Negeri 2 Sampit, Kalimantan
-                            Tengah. Selama menempuh pendidikan, saya
-                            mempelajari berbagai disiplin ilmu, mulai dari
-                            matematika dan geografi hingga ekonomi dan
-                            informatika.
-                        </p>
-
-                        <p>
-                            Ketertarikan saya pada bidang teknologi
-                            tercermin melalui pembelajaran pemrograman,
-                            pengolahan data, visualisasi data, serta
-                            eksplorasi metode machine learning. Saya
-                            berupaya mengembangkan kemampuan teknis secara
-                            bertahap melalui pembelajaran dan praktik.
-                        </p>
-
-                        <div class="about-facts">
-
-                            <div class="fact-item">
-                                <span class="fact-number">04</span>
-                                <span class="fact-label">Mata Pelajaran</span>
-                            </div>
-
-                            <div class="fact-item">
-                                <span class="fact-number">07</span>
-                                <span class="fact-label">Kelompok Teknologi</span>
-                            </div>
-
-                            <div class="fact-item">
-                                <span class="fact-number">2022–25</span>
-                                <span class="fact-label">Periode SMA</span>
-                            </div>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- =========================
-             PENDIDIKAN
-        ========================== -->
-        <section class="education section" id="pendidikan">
-
-            <div class="container">
-
-                <div class="section-heading">
-                    <div>
-                        <span class="section-index">02 / EDUCATION</span>
-                        <h2>Riwayat Pendidikan<span class="heading-period">.</span></h2>
-                    </div>
-
-                    <span class="section-tag">ACADEMIC JOURNEY</span>
-                </div>
-
-                <article class="education-card">
-
-                    <div class="education-year">
-                        <span class="year-label">PERIODE</span>
-                        <span class="year-value">2022</span>
-                        <span class="year-separator">—</span>
-                        <span class="year-value">2025</span>
-                    </div>
-
-                    <div class="education-content">
-
-                        <span class="education-badge">
-                            PENDIDIKAN MENENGAH ATAS
-                        </span>
-
-                        <h3>SMA Negeri 2 Sampit</h3>
-
-                        <p class="education-location">
-                            <span aria-hidden="true">⌖</span>
-                            Sampit, Kalimantan Tengah, Indonesia
-                        </p>
-
-                        <p class="education-description">
-                            Menempuh pendidikan menengah atas di SMA Negeri
-                            2 Sampit dengan mempelajari berbagai bidang
-                            akademik sebagai dasar pengembangan kemampuan
-                            analitis, pemahaman sosial-ekonomi, dan literasi
-                            teknologi.
-                        </p>
-
-                        <div class="education-tags">
-                            <span>Matematika</span>
-                            <span>Geografi</span>
-                            <span>Ekonomi</span>
-                            <span>Informatika</span>
-                        </div>
-
-                    </div>
-
-                    <div class="education-index" aria-hidden="true">
-                        01
-                    </div>
-
-                </article>
-
-            </div>
-
-        </section>
-
-
-        <!-- =========================
-             KEAHLIAN TEKNIS
-        ========================== -->
-        <section class="skills section" id="keahlian">
-
-            <div class="container">
-
-                <div class="section-heading">
-                    <div>
-                        <span class="section-index">03 / TECHNICAL SKILLS</span>
-                        <h2>Keahlian Teknis<span class="heading-period">.</span></h2>
-                    </div>
-
-                    <span class="section-tag">TOOLS & TECHNOLOGIES</span>
-                </div>
-
-                <p class="section-description">
-                    Teknologi, bahasa pemrograman, library, dan metode
-                    komputasi yang menjadi bagian dari perjalanan belajar
-                    saya dalam bidang pengolahan data dan pengembangan
-                    perangkat lunak.
+        <section id="profil">
+
+            <figure>
+                <img
+                    src="../assets/james.jpeg"
+                    alt="Foto profil James Aldo Parlindungan"
+                    width="300"
+                    height="300"
+                >
+                <figcaption>James Aldo Parlindungan</figcaption>
+            </figure>
+
+            <div>
+                <p>DATA SCIENCE STUDENT</p>
+
+                <h1>James Aldo Parlindungan</h1>
+
+                <p>
+                    Mahasiswa Sains Data di Universitas Logistik dan Bisnis
+                    Internasional yang tertarik pada teknologi, pemrograman,
+                    analisis data, dan pengembangan solusi berbasis data.
                 </p>
 
-                <div class="skills-grid">
-
-                    <!-- CATEGORY 01 -->
-                    <article class="skill-card">
-
-                        <div class="skill-card-header">
-                            <span class="skill-number">01</span>
-                            <span class="skill-symbol" aria-hidden="true">&lt;/&gt;</span>
-                        </div>
-
-                        <h3>Programming Languages</h3>
-
-                        <p>Bahasa untuk pengolahan data dan pengembangan aplikasi.</p>
-
-                        <div class="skill-list">
-                            <span class="skill-tag skill-featured">Python</span>
-                            <span class="skill-tag">SQL</span>
-                        </div>
-
-                    </article>
-
-
-                    <!-- CATEGORY 02 -->
-                    <article class="skill-card">
-
-                        <div class="skill-card-header">
-                            <span class="skill-number">02</span>
-                            <span class="skill-symbol" aria-hidden="true">[ ]</span>
-                        </div>
-
-                        <h3>Framework</h3>
-
-                        <p>Framework untuk membangun aplikasi web berbasis Python.</p>
-
-                        <div class="skill-list">
-                            <span class="skill-tag skill-featured">Django</span>
-                        </div>
-
-                    </article>
-
-
-                    <!-- CATEGORY 03 -->
-                    <article class="skill-card">
-
-                        <div class="skill-card-header">
-                            <span class="skill-number">03</span>
-                            <span class="skill-symbol" aria-hidden="true">⌘</span>
-                        </div>
-
-                        <h3>Python Libraries</h3>
-
-                        <p>Library untuk manipulasi data, komputasi numerik, dan visualisasi.</p>
-
-                        <div class="skill-list">
-                            <span class="skill-tag skill-featured">pandas</span>
-                            <span class="skill-tag">NumPy</span>
-                            <span class="skill-tag">Matplotlib</span>
-                        </div>
-
-                    </article>
-
-
-                    <!-- CATEGORY 04 -->
-                    <article class="skill-card">
-
-                        <div class="skill-card-header">
-                            <span class="skill-number">04</span>
-                            <span class="skill-symbol" aria-hidden="true">∑</span>
-                        </div>
-
-                        <h3>Algorithms & Machine Learning</h3>
-
-                        <p>Metode analisis dan pemodelan statistik berbasis data.</p>
-
-                        <div class="skill-list">
-                            <span class="skill-tag skill-featured">
-                                Principal Component Analysis
-                            </span>
-                            <span class="skill-tag">
-                                Gaussian Process Regression
-                            </span>
-                        </div>
-
-                    </article>
-
-
-                    <!-- CATEGORY 05 -->
-                    <article class="skill-card">
-
-                        <div class="skill-card-header">
-                            <span class="skill-number">05</span>
-                            <span class="skill-symbol" aria-hidden="true">△</span>
-                        </div>
-
-                        <h3>Deep Learning Frameworks</h3>
-
-                        <p>
-                            Bagian ini dapat diperbarui ketika sudah mulai
-                            menggunakan framework deep learning.
-                        </p>
-
-                        <div class="skill-list">
-                            <span class="skill-tag skill-muted">
-                                Belum dicantumkan
-                            </span>
-                        </div>
-
-                    </article>
-
-
-                    <!-- CATEGORY 06 -->
-                    <article class="skill-card">
-
-                        <div class="skill-card-header">
-                            <span class="skill-number">06</span>
-                            <span class="skill-symbol" aria-hidden="true">▤</span>
-                        </div>
-
-                        <h3>Database & Backend</h3>
-
-                        <p>Teknologi untuk penyimpanan dan pengelolaan data.</p>
-
-                        <div class="skill-list">
-                            <span class="skill-tag skill-featured">MySQL</span>
-                            <span class="skill-tag">PostgreSQL</span>
-                        </div>
-
-                    </article>
-
-
-                    <!-- CATEGORY 07 -->
-                    <article class="skill-card skill-card-wide">
-
-                        <div class="skill-card-header">
-                            <span class="skill-number">07</span>
-                            <span class="skill-symbol" aria-hidden="true">⚙</span>
-                        </div>
-
-                        <h3>Development Tools</h3>
-
-                        <p>
-                            Perangkat yang digunakan untuk menulis kode,
-                            melakukan eksperimen, mengelola proyek, dan
-                            mengembangkan kemampuan teknis.
-                        </p>
-
-                        <div class="skill-list">
-                            <span class="skill-tag skill-featured">Visual Studio Code</span>
-                            <span class="skill-tag">Jupyter Notebook</span>
-                            <span class="skill-tag">Google Colab</span>
-                            <span class="skill-tag">GitHub</span>
-                        </div>
-
-                    </article>
-
-                </div>
-
-                <div class="skills-note">
-                    <span class="note-symbol" aria-hidden="true">i</span>
-                    <p>
-                        Daftar keahlian ini menunjukkan teknologi yang
-                        dicantumkan dalam profil, bukan tingkat kemahiran
-                        atau sertifikasi pada setiap teknologi.
-                    </p>
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- =========================
-             MATA PELAJARAN
-        ========================== -->
-        <section class="subjects section" id="mata-pelajaran">
-
-            <div class="container">
-
-                <div class="section-heading">
-                    <div>
-                        <span class="section-index">04 / ACADEMIC INTERESTS</span>
-                        <h2>Bidang Akademik<span class="heading-period">.</span></h2>
-                    </div>
-
-                    <span class="section-tag">HIGH SCHOOL SUBJECTS</span>
-                </div>
-
-                <p class="section-description">
-                    Empat mata pelajaran yang dipelajari selama menempuh
-                    pendidikan di SMA Negeri 2 Sampit.
+                <p>
+                    <a href="#tentang">Kenali Saya</a>
+                    <a href="#kontak">Hubungi Saya</a>
                 </p>
 
-                <div class="subjects-grid">
-
-                    <article class="subject-card subject-math">
-                        <span class="subject-number">01</span>
-                        <span class="subject-icon" aria-hidden="true">∑</span>
-                        <h3>Matematika</h3>
-                        <p>
-                            Penalaran logis, analisis kuantitatif,
-                            dan pemecahan masalah.
-                        </p>
-                        <span class="subject-index">MAT</span>
-                    </article>
-
-                    <article class="subject-card subject-geography">
-                        <span class="subject-number">02</span>
-                        <span class="subject-icon" aria-hidden="true">◎</span>
-                        <h3>Geografi</h3>
-                        <p>
-                            Kajian fenomena keruangan, wilayah,
-                            dan hubungan manusia dengan lingkungan.
-                        </p>
-                        <span class="subject-index">GEO</span>
-                    </article>
-
-                    <article class="subject-card subject-economics">
-                        <span class="subject-number">03</span>
-                        <span class="subject-icon" aria-hidden="true">↗</span>
-                        <h3>Ekonomi</h3>
-                        <p>
-                            Pemahaman aktivitas ekonomi, sumber daya,
-                            dan pengambilan keputusan.
-                        </p>
-                        <span class="subject-index">EKO</span>
-                    </article>
-
-                    <article class="subject-card subject-informatics">
-                        <span class="subject-number">04</span>
-                        <span class="subject-icon" aria-hidden="true">&lt;/&gt;</span>
-                        <h3>Informatika</h3>
-                        <p>
-                            Dasar komputasi, algoritma, pemrograman,
-                            dan pemanfaatan teknologi.
-                        </p>
-                        <span class="subject-index">INF</span>
-                    </article>
-
-                </div>
-
             </div>
 
         </section>
 
 
-        <!-- =========================
-             KONTAK / PENUTUP
-        ========================== -->
-        <section class="contact section" id="kontak">
+        <!-- TENTANG SAYA -->
+        <section id="tentang">
 
-            <div class="container">
+            <h2>Tentang Saya</h2>
 
-                <div class="contact-panel">
+            <p>
+                Saya adalah James Aldo Parlindungan, mahasiswa Program Studi
+                Sains Data di Universitas Logistik dan Bisnis Internasional.
+                Saya memiliki ketertarikan terhadap perkembangan teknologi,
+                pemrograman, analisis data, serta penerapan metode komputasi
+                untuk menyelesaikan berbagai permasalahan.
+            </p>
 
-                    <div class="contact-content">
+            <p>
+                Saya terus berusaha mengembangkan kemampuan teknis dan
+                pemahaman konseptual dalam bidang sains data, khususnya
+                melalui pemrograman Python, pengolahan data, visualisasi,
+                analisis statistik, dan penerapan metode machine learning.
+            </p>
 
-                        <span class="section-index">05 / GET IN TOUCH</span>
+        </section>
 
-                        <h2>
-                            Mari terhubung
-                            <span class="heading-outline">dan bertumbuh.</span>
-                        </h2>
 
+        <!-- ALASAN MEMILIH SAINS DATA -->
+        <section id="alasan">
+
+            <h2>Mengapa Memilih Sains Data?</h2>
+
+            <p>
+                Saya memilih jurusan Data Science karena saya tertarik dengan
+                teknologi, analisis data, dan bagaimana data dapat digunakan
+                untuk memecahkan masalah serta membantu pengambilan keputusan.
+                Saya ingin mengembangkan kemampuan berpikir kritis,
+                pemrograman, dan analisis agar dapat memanfaatkan data menjadi
+                informasi yang bermanfaat. Selain itu, saya melihat Data
+                Science memiliki peluang karier yang luas dan relevan dengan
+                perkembangan teknologi di masa depan.
+            </p>
+
+        </section>
+
+
+        <!-- KEAHLIAN -->
+        <section id="keahlian">
+
+            <h2>Keahlian dan Teknologi</h2>
+
+            <p>
+                Teknologi dan perangkat yang saya pelajari untuk mendukung
+                pengembangan kemampuan di bidang sains data.
+            </p>
+
+
+            <!-- BAHASA PEMROGRAMAN -->
+            <article>
+
+                <h3>1. Bahasa Pemrograman dan Web Technologies</h3>
+
+                <ul>
+                    <li>Python</li>
+                    <li>SQL</li>
+                </ul>
+
+            </article>
+
+
+            <!-- FRAMEWORK -->
+            <article>
+
+                <h3>2. Framework</h3>
+
+                <ul>
+                    <li>Django</li>
+                </ul>
+
+            </article>
+
+
+            <!-- LIBRARY PYTHON -->
+            <article>
+
+                <h3>3. Library Python</h3>
+
+                <ul>
+                    <li>pandas</li>
+                    <li>NumPy</li>
+                    <li>Matplotlib</li>
+                </ul>
+
+            </article>
+
+
+            <!-- ALGORITMA DAN MACHINE LEARNING -->
+            <article>
+
+                <h3>4. Algoritma, Machine Learning, dan Deep Learning</h3>
+
+                <ul>
+                    <li>
+                        <strong>Principal Component Analysis (PCA)</strong>
                         <p>
-                            Terbuka untuk berdiskusi, berbagi pengetahuan,
-                            dan berkolaborasi dalam proyek teknologi,
-                            pengolahan data, maupun pengembangan aplikasi.
+                            Metode reduksi dimensi yang digunakan untuk
+                            merangkum informasi dari sejumlah variabel
+                            menjadi komponen utama.
                         </p>
+                    </li>
 
-                        <a
-                            href="mailto:emailanda@example.com"
-                            class="button button-light"
-                        >
-                            Hubungi Saya <span aria-hidden="true">↗</span>
-                        </a>
+                    <li>
+                        <strong>Gaussian Process Regression (GPR)</strong>
+                        <p>
+                            Metode regresi probabilistik yang dapat digunakan
+                            untuk memodelkan hubungan antarvariabel sekaligus
+                            memperkirakan ketidakpastian prediksi.
+                        </p>
+                    </li>
+                </ul>
 
-                    </div>
+            </article>
 
-                    <div class="contact-decoration" aria-hidden="true">
-                        <span class="decoration-ring ring-one"></span>
-                        <span class="decoration-ring ring-two"></span>
-                        <span class="decoration-cross">+</span>
-                        <span class="decoration-label">LET'S CONNECT</span>
-                    </div>
 
-                </div>
+            <!-- DEEP LEARNING FRAMEWORK -->
+            <article>
 
-            </div>
+                <h3>5. Deep Learning Framework</h3>
+
+                <p>
+                    Saat ini belum ada framework deep learning yang
+                    dicantumkan dalam daftar keahlian.
+                </p>
+
+            </article>
+
+
+            <!-- DATABASE -->
+            <article>
+
+                <h3>6. Database dan Teknologi Backend</h3>
+
+                <ul>
+                    <li>MySQL</li>
+                    <li>PostgreSQL</li>
+                </ul>
+
+            </article>
+
+
+            <!-- TOOLS -->
+            <article>
+
+                <h3>7. Tools dan Development Environment</h3>
+
+                <ul>
+                    <li>Visual Studio Code</li>
+                    <li>Jupyter Notebook</li>
+                    <li>Google Colab</li>
+                    <li>GitHub</li>
+                </ul>
+
+            </article>
+
+        </section>
+
+
+        <!-- PENDIDIKAN -->
+        <section id="pendidikan">
+
+            <h2>Riwayat Pendidikan</h2>
+
+
+            <!-- SMA -->
+            <article>
+
+                <h3>SMA Negeri 2 Sampit</h3>
+
+                <p>
+                    <time datetime="2022">2022</time> -
+                    <time datetime="2025">2025</time>
+                </p>
+
+                <p>Sekolah Menengah Atas</p>
+
+                <p>
+                    Menempuh pendidikan di SMA Negeri 2 Sampit,
+                    sekolah menengah atas negeri yang berlokasi di
+                    Sampit, Kalimantan Tengah.
+                </p>
+
+                <h4>Mata Pelajaran</h4>
+
+                <ul>
+                    <li>Matematika</li>
+                    <li>Geografi</li>
+                    <li>Ekonomi</li>
+                    <li>Informatika</li>
+                </ul>
+
+            </article>
+
+
+            <!-- UNIVERSITAS -->
+            <article>
+
+                <h3>Universitas Logistik dan Bisnis Internasional</h3>
+
+                <p>
+                    <time datetime="2025">2025</time> - Sekarang
+                </p>
+
+                <p>Program Studi S1 Sains Data</p>
+
+                <p>
+                    Menempuh pendidikan tinggi pada bidang Sains Data
+                    dengan mempelajari pengolahan data, pemrograman,
+                    analisis statistik, serta metode komputasi untuk
+                    menghasilkan informasi yang mendukung pengambilan
+                    keputusan.
+                </p>
+
+            </article>
+
+        </section>
+
+
+        <!-- PRESTASI -->
+        <section id="prestasi">
+
+            <h2>Prestasi</h2>
+
+            <p>
+                Beberapa pencapaian dalam bidang olahraga dan kompetisi
+                yang menjadi bagian dari pengalaman selama menempuh
+                pendidikan.
+            </p>
+
+
+            <article>
+
+                <h3>Juara 2 Tournament Basketball 5x5</h3>
+
+                <p>
+                    Meraih posisi juara kedua dalam turnamen bola basket
+                    kategori 5 lawan 5 yang diselenggarakan oleh GIBS School
+                    Banjarmasin.
+                </p>
+
+                <p>
+                    <strong>Penyelenggara:</strong>
+                    GIBS School Banjarmasin
+                </p>
+
+            </article>
+
+
+            <article>
+
+                <h3>Juara 2 Tournament Mobile Legends Antar SMA</h3>
+
+                <p>
+                    Meraih posisi juara kedua dalam turnamen Mobile Legends
+                    antarsekolah menengah atas yang diselenggarakan oleh
+                    UNDA University.
+                </p>
+
+                <p>
+                    <strong>Penyelenggara:</strong>
+                    UNDA University
+                </p>
+
+            </article>
+
+        </section>
+
+
+        <!-- MEDIA SOSIAL DAN KONTAK -->
+        <section id="kontak">
+
+            <h2>Media Sosial dan Kontak</h2>
+
+            <p>
+                Saya terbuka untuk membangun koneksi, berbagi pengalaman,
+                serta berkolaborasi dalam kegiatan akademik dan
+                pengembangan teknologi.
+            </p>
+
+
+            <!-- EMAIL -->
+            <article>
+
+                <h3>Email</h3>
+
+                <p>
+                    <a href="mailto:jamesaldoparl24@gmail.com">
+                        jamesaldoparl24@gmail.com
+                    </a>
+                </p>
+
+            </article>
+
+
+            <!-- INSTAGRAM -->
+            <article>
+
+                <h3>Instagram</h3>
+
+                <p>
+                    <a
+                        href="https://www.instagram.com/justnn616/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="Kunjungi Instagram James Aldo Parlindungan"
+                    >
+                        @justnn616
+                    </a>
+                </p>
+
+            </article>
+
+
+            <!-- LINKEDIN -->
+            <article>
+
+                <h3>LinkedIn</h3>
+
+                <p>
+                    <a
+                        href="https://www.linkedin.com/in/james-aldo-parlindungan-845b6a389/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="Kunjungi LinkedIn James Aldo Parlindungan"
+                    >
+                        James Aldo Parlindungan
+                    </a>
+                </p>
+
+            </article>
 
         </section>
 
     </main>
 
 
-    <!-- =========================
-         FOOTER
-    ========================== -->
-    <footer class="site-footer">
+    <!-- FOOTER -->
+    <footer>
 
-        <div class="container footer-inner">
+        <p>
+            &copy; <time datetime="2026">2026</time>
+            James Aldo Parlindungan. Seluruh hak cipta dilindungi.
+        </p>
 
-            <a href="#beranda" class="brand footer-brand">
-                <span class="brand-symbol">B.</span>
-                <span class="brand-name">BIOGRAFI<span class="brand-dot">.</span></span>
-            </a>
+        <p>
+            Data Science Student | Research & Technology
+        </p>
 
-            <p class="footer-copy">
-                © <span id="current-year">2026</span> Nama Lengkap.
-                Dibuat dengan semangat untuk terus belajar.
-            </p>
-
-            <a href="#beranda" class="back-to-top">
-                Kembali ke atas ↑
-            </a>
-
-        </div>
+        <p>
+            <a href="#beranda">Kembali ke Atas</a>
+        </p>
 
     </footer>
 
-
-    <!-- =========================
-         JAVASCRIPT
-    ========================== -->
-    <script>
-        // Tahun otomatis pada footer
-        document.getElementById("current-year").textContent =
-            new Date().getFullYear();
-
-        // Menu navigasi untuk perangkat mobile
-        const menuToggle = document.getElementById("menu-toggle");
-        const navMenu = document.getElementById("nav-menu");
-        const navLinks = document.querySelectorAll(".nav-link");
-
-        menuToggle.addEventListener("click", function () {
-            const isOpen = navMenu.classList.toggle("is-open");
-
-            menuToggle.classList.toggle("is-active", isOpen);
-            menuToggle.setAttribute("aria-expanded", String(isOpen));
-        });
-
-        // Tutup menu setelah tautan dipilih
-        navLinks.forEach(function (link) {
-            link.addEventListener("click", function () {
-                navMenu.classList.remove("is-open");
-                menuToggle.classList.remove("is-active");
-                menuToggle.setAttribute("aria-expanded", "false");
-            });
-        });
-    </script>
+<script src="../script/james.js"></script>
 
 </body>
+
 </html>

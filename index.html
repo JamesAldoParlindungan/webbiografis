@@ -17,11 +17,6 @@
 </head>
 
 <body>
-
-    <!-- ==================================================
-         HEADER DAN NAVIGASI
-    ================================================== -->
-
     <header id="header">
 
         <nav aria-label="Navigasi utama">
@@ -50,6 +45,16 @@
                 <li>
                     <a href="#pengaturan">Pengaturan</a>
                 </li>
+
+                <li class="nav-dropdown">
+                    <details>
+                        <summary aria-controls="profile-menu" aria-expanded="false">Profil</summary>
+                        <ul class="nav-dropdown-menu" id="profile-menu">
+                            <li><a href="template/kimi.html">Kimi</a></li>
+                            <li><a href="template/james.html">James</a></li>
+                        </ul>
+                    </details>
+                </li>
             </ul>
 
         </nav>
@@ -58,11 +63,6 @@
 
 
     <main>
-
-        <!-- ==================================================
-             1. HERO SECTION
-        ================================================== -->
-
         <section id="beranda" class="hero">
 
             <div class="hero-content">
@@ -997,7 +997,7 @@
     </footer>
 
 
-    <!-- JAVASCRIPT AKAN DITAMBAHKAN PADA TAHAP BERIKUTNYA -->
+    <script src="script/profile-dropdown.js" defer></script>
 
 </body>
 
